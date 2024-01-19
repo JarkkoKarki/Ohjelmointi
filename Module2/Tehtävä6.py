@@ -1,0 +1,11 @@
+import random
+numero1 = random.randint(0,9)
+numero2 = random.randint(0,9)
+numero3 = random.randint(0,9)
+koodi1 = str(numero1) + str(numero2) + str(numero3)
+numero4 = random.randint(1, 6)
+numero5 = random.randint(1, 6)
+numero6 = random.randint(1, 6)
+numero7 = random.randint(1, 6)
+koodi2 = str(numero4) + str(numero5) + str(numero6) + str(numero7)
+print(f"Kolme numeroinen koodi: {koodi1}\nNeljä numeroinen koodi: {koodi2}")
