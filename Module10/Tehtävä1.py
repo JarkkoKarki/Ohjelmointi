@@ -23,6 +23,6 @@ class Hissi:
 
 h1 = Hissi(1, 10)
 h1.siirry_kerrokseen(5)
-print(h1.kerros)
+print(f"Kerros: {h1.kerros}")
 h1.siirry_kerrokseen(3)
-print(h1.kerros)
+print(f"Kerros: {h1.kerros}")
