@@ -1,7 +1,13 @@
 import requests
+# Piilotetaan Api_key
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
 paikka = input("Anna Paikan nimi: ").lower()
 
-url2_paikka = f'https://api.openweathermap.org/geo/1.0/direct?q={paikka}&limit=5&appid=b61195073bec8db1c0342e58e195762b'
+url2_paikka = f'https://api.openweathermap.org/geo/1.0/direct?q={paikka}&limit=5&appid={os.getenv("api_key")}'
 
 try:
     vastaus = requests.get(url2_paikka)
@@ -11,7 +17,7 @@ try:
         latitude = vastaus[0]["lat"]
         longitude = vastaus[0]["lon"]
 
-        url = f'https://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid=b61195073bec8db1c0342e58e195762b'
+        url = f'https://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid={os.getenv("api_key")}'
         vastaus = requests.get(url)
         if vastaus.status_code == 200:
             vastaus = vastaus.json()
