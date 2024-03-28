@@ -1,5 +1,5 @@
 import requests
-api_key = "b61195073bec8db1c0342e58e195762b"
+api_key = "{Enter Api}"
 
 paikka = input("Anna Paikan nimi: ").lower()
 
